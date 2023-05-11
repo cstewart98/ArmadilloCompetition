@@ -1,0 +1,341 @@
+/* Hold unique font */
+@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
+
+/* Overall deisgns */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #000000;
+}
+
+body {
+    background-color: #0492C2;
+}
+
+.error {
+    margin-top: 10px;
+    color: #FF0000;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center-txt {
+    text-align: center;
+}
+
+.bk-lav {
+    width: 500px;
+    height: 450px;
+    background-color: #BBBEFE;
+    position: relative;
+    top: 50px;
+    padding: 50px;
+}
+
+.col {
+    margin-top: 30px;
+    display: flex;
+}
+
+.no-ph {
+    margin-top: 55px;
+}
+
+.push {
+    /* margin-left: auto; */
+    text-align: center;
+    margin-top: 200px;
+}
+
+.push2 {
+    margin-top: 120px;
+}
+
+.gamebox {
+    background-color: #BBBEFE;
+    color: #000000;
+    margin-left: 5px;
+    margin-right: 420px;
+    width: max-content;
+}
+
+ul {
+    margin-top: 70px;
+}
+
+li {
+    font-weight: bold;
+    list-style-type: none;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.on-now {
+    background-color: #FF0000;
+    box-shadow: 2px 2px 2px #000000;
+}
+
+.lave {
+    padding: 5px;
+    background-color: #BBBEFE;
+    width: 500px;
+    height: 450px;
+}
+
+.centerize {
+    text-align: center;
+}
+
+.center-page {
+    position: relative;
+    top: 55px;
+    left: 450px;
+    height: 360px;
+}
+
+h1 {
+    font-family: "Kenia", monnospace;
+    font-size: 45px;
+    padding: 5px;
+}
+
+h2 {
+    font-family: "Kenia", monospace;
+    padding: 5px;
+}
+
+h5 {
+    margin-bottom: 20px;
+}
+
+.cool {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.leaderboard {
+    background-color: #0000FF;
+    color: #FFFFFF;
+}
+
+.playground {
+    background-color: #F1B04C;
+}
+
+.competition {
+    background-color: #00FF00;
+    /* width: 200px; */
+}
+
+.stay-back {
+    margin-bottom: 200px;
+}
+
+.screen {
+    margin: auto;
+    background-color: #0492C2;
+    width: max-content;
+    height: 100px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.bigger {
+    font-size: 45px;
+}
+
+.header {
+    background-color: #BBBEFE;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #FF0000;
+    box-shadow: 2px 2px 2px #000000;
+    font-weight: bold;
+}
+
+.point-holder {
+    /* margin-top: 20px; */
+    margin-left: 20px;
+}
+
+/* Home Page */
+
+#ready {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Signup page */
+
+.rules {
+    font-family: sans-serif;
+    margin: auto;
+    margin-top: 50px;
+    padding: 5px;
+    background-color: #FFFFFF;
+    height: max-content;
+    width: 400px;
+}
+
+#name {
+    margin-left: 10px;
+    margin-top: 20px;
+    height: 20px;
+    width: 90%;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.agree {
+    width: 100%;
+}
+
+
+/* Speed Counter  */
+
+input, select {
+    height: 30px;
+    font-size: 20px;
+}
+
+#game_one {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#first, .mid {
+    text-align: center;
+    margin-top: 80px;
+}
+
+#second-guess {
+    font-family: sans-serif;
+}
+
+label {
+    font-size: 30px;
+}
+
+.space {
+    margin-top: 10px;
+}
+
+.second_guess {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+/* Odd One Out */
+
+#Arr {
+    margin-top: 10px;
+}
+
+/* MasterMind */
+
+#bank {
+    background-color: #FFFFFF;
+    width: max-content; 
+    height: 190px;
+    padding: 5px;
+    margin: auto;
+}
+
+.push3 {
+    margin-top: 50px;
+}
+
+/* Leaderboard */
+
+#lead-title, #pg-title {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#midrule {
+    text-align: center;
+}
+
+.full {
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+}
+
+td, th {
+    color: #FFFFFF;
+}
+
+/* PLAYGROUND */
+
+#selection {
+    margin-top: 40px;
+    display: flex;
+    display: flexbox;
+    justify-content: center;
+}
+
+.game {
+    height: 150px;
+    width: 150px;
+    background-color: #795324;
+    margin-right: 20px;
+}
+
+.game-title {
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 40px;
+}
+
+.game-select {
+    text-decoration: none;
+}
+
+.pg-lav {
+    background-color: #BBBEFE;
+    height: max-content;
+    width: 90%;
+    padding: 5px;
+    margin: auto;
+    margin-top: 55px;
+}
+
+/* Images  */
+
+.logo {
+    width: 200px;
+    height: 100px;
+}
+
+.win_lose {
+    position: fixed;
+    z-index: 0;
+}
+
+.push3 {
+    margin-left: 550px;
+    margin-bottom: 100px;
+}
+
+.sans {
+    font-family: sans-serif;
+}

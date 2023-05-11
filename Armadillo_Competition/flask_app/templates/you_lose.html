@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+
+    <div class="bk-lav center-page">
+        <div class="rules">
+            <p/>
+                I'm sorry but you lost. Be grateful that this isn't real life... 
+                <em>Can't deal with that many paperwork.</em> Just remember, there's 
+                always next time. Speaking of next time... click on the button below
+                and play again. Let's see if you can beat the high score.
+            </p>
+            <form action='/armadillo_competition/add_user'>
+                <button class="agree leaderboard" type="submit">View Leaderboard</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+
+    <div class="col no-ph">
+
+        <div class="gamebox">
+            <ul>
+                <li>Speed Counter</li>
+                <li>Shuffle the E's</li>
+                <li>An Eye for Numbers</li>
+                <li>Odd One Out</li>
+                <li>MasterMind</li>
+                <li class="on-now">Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+
+        <div class="lave">
+            <h1 class="cool">"Rock, Paper, Scissors"</h1>
+
+        <!-- RULES -->
+            <div class="rules">
+                <p>
+                    Nothing special to this game; just the classic game of
+                    <strong>"Rock, Paper, Scissors!"</strong> You will 
+                    select either Rock, Paper, or Scissors and I will do 
+                    the same. Like the original: <em>Rock crushes Scissors, 
+                    Scissors cuts Paper, and Paper covers Rock.</em> Your 
+                    goal is to select the weapon that beats mine. If we tie, 
+                    we'll go again, until a clear winner is decided. 
+                    Failure to do so, will lead to your elmination. But 
+                    your sucess will reward you 250pts!
+                </p>
+                <form action="/armadillo_competition/rock_paper_scissors/play">
+                    <button class="agree" type="submit">Let's Go</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

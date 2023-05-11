@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}"> 
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+    <div class="bk-lav center-page">
+        <div id="ready">
+            <h3>Are You Ready?!</h3>
+            <form action="/armadillo_competition/signup">
+                <button type="submit">Single Player</button>
+            </form>
+            <form action="/armadillo_competition/leaderboard">
+                <button class="leaderboard" type="submit">Leaderboard</button>
+            </form>
+            <form action="/unaviable">
+                <button class="playground" type="submit">Playground</button>
+            </form>
+            <form action="/unaviable">
+                <button class="competition" type="submit">Multiplayer</button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+<script>
+    function coming_soon() {
+        alert("Coming soon!")
+    }
+</script>
+</html>

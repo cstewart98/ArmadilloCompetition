@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+    <div class="point-holder">
+        <h3>
+            Score: {{points}}pts
+        </h3>
+    </div>
+    
+    <div class="col">
+        <div class="gamebox">
+            <ul>
+                <li>Speed Counter</li>
+                <li>Shuffle the E's</li>
+                <li>An Eye for Numbers</li>
+                <li>Odd One Out</li>
+                <li>MasterMind</li>
+                <li class="on-now">Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+        <div class="lave centerize">
+                <h3 class="bigger push2">You picked: {{you_rps}}</h3>
+                <h3 class="bigger" id="umm">I pick:...</h3>
+                <h3 class="bigger" id="com">I pick: {{com_rps}}</h3>
+        </div>
+    </div>
+</body>
+<script>
+    function show(){
+        document.getElementById('umm').remove();
+        document.getElementById('com').style.visibility='visible';
+        setTimeout(rps_consequence,3000);
+    }
+
+    function rps_consequence() {
+        window.location.assign('/armadillo_competition/rock_paper_scissors/final'); // Determines the outcome of the game
+    }
+
+    document.getElementById('com').style.visibility='hidden';
+    setTimeout(show,5000);
+</script>
+</html>

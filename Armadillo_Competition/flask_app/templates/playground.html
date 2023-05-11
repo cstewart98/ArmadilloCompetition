@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}"> 
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+
+    <div class="pg-lav">
+        <h1 id="pg-title">Playground</h1>
+    
+        <h4 id="midrule">Select a Miigame to play:</h4>
+
+        <!-- MINIGAME SELECTION -->
+        <div id="selection">
+            <a class="game-select" href="/armadillo_competition/speed_counter/rules">
+                <div class="game">
+                    <p class="game-title">Speed Counter</p>
+                </div>
+            </a>
+            <a class="game-select" href="/armadillo_competition/shuffle_the_es/rules">
+                <div class="game">
+                    <p class="game-title">Shuffle the E's</p>
+                </div>
+            </a>
+            <a class="game-select" href="/armadillo_competition/an_eye_for_numbers/rules">
+                <div class="game">
+                    <p class="game-title">An Eye for Numbers</p>
+                </div>
+            </a>
+            <a class="game-select" href="/armadillo_competition/odd_one_out/rules">
+                <div class="game">
+                    <p class="game-title">Odd One Out</p>
+                </div>
+            </a>
+            <a class="game-select" href="/armadillo_competition/mastermind/rules">
+                <div class="game">
+                    <p class="game-title">Master Mind</p>
+                </div>
+            </a>
+            <a class="game-select" href="/armadillo_competition/rock_paper_scissors/rules">
+                <div class="game">
+                    <p class="game-title">Rock, Paper, Scissors</p>
+                </div>
+            </a>
+        </div>
+    <form action="/">
+        <button class="agree full" type="submit">Home</button>
+    </form>
+</div>
+</body>
+</html>

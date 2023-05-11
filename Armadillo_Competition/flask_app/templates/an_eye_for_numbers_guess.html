@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+        <h2>An Eye For Numbers</h2>
+    </div>
+
+    <h3 class="point-holder">
+        Score: {{points}}pts
+    </h3>
+
+    <div class="col">
+        <div class="gamebox">
+            <ul>
+                <li>Speed Counter</li>
+                <li>Shuffle the E's</li>
+                <li class="on-now">An Eye for Numbers</li>
+                <li>Odd One Out</li>
+                <li>MasterMind</li>
+                <li>Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+
+        <!-- INPUT YOUR GUESS -->
+        <div class="lave centerize">
+            <h3 class="push2 bigger">Replicate the number as best as possible</h3>
+        <form class="space" action="/armadillo_competition/an_eye_for_numbers/check", method="post">
+            <input type="number" name="aefn_guess" id="aefn_guess" title="aefn_guess">
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function gameplay(){
+        setTimeout(dead,10000); /*Time you have left */
+    }
+
+    function dead() { /* You ran out of time */
+        window.location.assign('/armadillo_competition/you_lose'); // Takes you to the "You lose" page
+    }
+
+
+    gameplay()
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div id="sc_one">
+        <div class="header">
+            <h1>Armadillo Competition</h1>
+            <!-- <h2>Speed Counter</h2> -->
+        </div>
+        
+        <h3 class="point-holder">
+            Score: {{points}}pts
+        </h3>
+        <div class="col">
+            <div class="gamebox">
+                <ul>
+                    <li class="on-now">Speed Counter</li>
+                    <li>Shuffle the E's</li>
+                    <li>An Eye for Numbers</li>
+                    <li>Odd One Out</li>
+                    <li>MasterMind</li>
+                    <li>Rock, Paper, Scissors</li>
+                </ul>
+            </div>
+            <div class="lave centerize"> 
+                <h4 class="push2" id="game_one">{{one}} + {{two}} + {{three}} + {{four}} + {{five}} + 
+                    {{six}} + {{seven}} + {{eight}} + {{nine}} + {{ten}} = ?</h4>
+
+                    <form action="/armadillo_competition/speed_counter/check" method="post">
+                        <input type="number" name="sc_guess" id="sc_guess" title="sc_guess" placeholder="Enter Guess Here...">
+                        <button type="submit">Guess</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function gameplay(){
+        document.getElementById('sc_one').style.visibility="visible";
+
+        setTimeout(dead,15000); /*Time you have left */
+    }
+
+    function dead() { /* You ran out of time */
+        document.getElementById('sc_one').style.visibility="hidden"; 
+        window.location.assign('/armadillo_competition/you_lose'); // Takes you to the "You lose" page
+    }
+
+
+    gameplay()
+</script>

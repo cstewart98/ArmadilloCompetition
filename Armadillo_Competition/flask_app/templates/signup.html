@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}"> 
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+
+    <div class="bk-lav center-page">
+        <div class="rules">
+            <p>
+                Welcome to "Armadillo Competition!" Here, you'll face in a series of challenges each of 'em daring.
+                For each challenge you complete, you will gain points. <em>Exciting I know!</em> 
+                The game won't stop till youu fail a challenge. In which your score will be added to the scoreboard.
+                Hopefully, your score will remain in #1 and not having some Armadillo out-ranking you. So you wanna play?
+                Type your name <em>Doesn't have to be your real name</em> in the textbox below and <strong>LET'S GET STARTED!!</strong>
+            </p>
+            {% for message in get_flashed_messages() %}
+            <p class="error">{{message}}</p>
+            {% endfor %}
+            <form action='/armadillo_competition/validator' method="post">
+            <input type="text" name="name" id="name" title="name" placeholder='My "name" is...'>
+
+                <button class="agree" type="submit">I Agree</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

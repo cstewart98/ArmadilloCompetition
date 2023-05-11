@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+
+    <div class="col no-ph">
+        <div class="gamebox">
+            <ul>
+                <li>Speed Counter</li>
+                <li>Shuffle the E's</li>
+                <li class="on-now">An Eye for Numbers</li>
+                <li>Odd One Out</li>
+                <li>MasterMind</li>
+                <li>Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+
+        <div class="lave">
+            <h1 class="cool">"An Eye For Numbers"</h1>
+
+            <!-- RULEPAGE   -->
+            <div class="rules">
+                <p>
+                    How good is your short-term memory? Well we are about to see how fast you can 
+                    process data! Within 3 seconds, I will show you a 10-digit number and all you
+                    have to do, is memorize as much as you can. When that time is up, the number will 
+                    vanish and then you will have to replicate <em>as much as possible</em> the number.
+                    Don't worry, you just have to correctly guess at least 6 numbers in the right 
+                    position. Don't think it'll be that easy... I will also add 5 seconds for
+                    you to submit your guess. Failure to do so, will lead to your elmination. But your 
+                    sucess will reward you 250pts!
+                </p>
+                <form action="/armadillo_competition/an_eye_for_numbers/play">
+                    <button class="agree" type="submit">Let's Go!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

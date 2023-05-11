@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+    <h3 class="point-holder">Score: {{points}}pts</h3>
+
+    <div class="col">
+        <div class="gamebox">
+            <ul>
+                <li>Speed Counter</li>
+                <li>Shuffle the E's</li>
+                <li>An Eye for Numbers</li>
+                <li class="on=now">Odd One Out</li>
+                <li>MasterMind</li>
+                <li>Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+        <div class="lave centerize">
+            <h3 id="Arr"> <!-- SHOWS GRID OF LETTERS -->
+            {{gridArr}}
+        </h3>
+
+        <div class="mid"">
+            <h3>What is the Odd One Out</h3>
+            <form action="/armadillo_competition/odd_one_out/check" method="post">
+                <input type="text" name="odd" id="odd" title="odd">
+                <button type="submit">Submit Guess</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function gameplay(){
+        setTimeout(dead,20000); /*Time you have left */
+    }
+
+    function dead() { /* You ran out of time */
+        window.location.assign('/armadillo_competition/you_lose'); // Takes you to the "You lose" page
+    }
+
+
+    gameplay()
+</script>

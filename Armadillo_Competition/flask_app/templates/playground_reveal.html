@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+        <div class="header">
+            <a href="/">
+                <img src="{{url_for('static',filename='img/'+'logo.png')}}" alt="Silhouette of an Armadillo" class="logo">
+                <h1>Armadillo Competition</h1>
+            </a>
+            </div>
+    <h3 class="point-holder">
+        Score: {{points}}pts
+    </h3>
+
+    <div class="push3"> <!-- SHOWS IF YOU WIN OR LOSE -->
+        {% if win_lose == 'YOU LOSE!' %}
+        <img src="{{url_for('static',filename='img/'+'loser.png')}}" alt="You Lose!" class="win_lose">
+        {% endif %}
+
+        {% if win_lose == 'YOU WIN!' %}
+        <img src="{{url_for('static',filename='img/'+'winner.png')}}" alt="You Win!">
+        {% endif %}
+    </div>
+
+    <!-- DISPLAYS THE PREVIOUS GAME -->
+    {% if what_game == 'Speed Counter' %}
+
+    <div class="col">
+        <div class="gamebox">
+            <ul>
+                <li class="on-now">Speed Counter</li>
+                <li>Shuffle the E's</li>
+                <li>An Eye for Numbers</li>
+                <li>Odd One Out</li>
+                <li>MasterMind</li>
+                <li>Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+        <div class="lave centerize"> 
+            <h4 class="push2" id="game_one">{{one}} + {{two}} + {{three}} + {{four}} + {{five}} + 
+                {{six}} + {{seven}} + {{eight}} + {{nine}} + {{ten}} = ?</h4>
+
+                <h4 class="center-txt bigger">
+                    {{sc_guess}}
+                </h4>
+            </div>
+    </div>
+</div>
+    {% endif %}
+</body>
+<script>
+    function playground() {
+        window.location.assign('/armadillo_competition/playground/select'); 
+    }
+
+    function showtime() {
+        setTimeout(playground,5000);
+    }
+
+showtime()
+</script>
+</html>

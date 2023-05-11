@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+
+    <div class="col no-ph">
+        <div class="gamebox">
+            <ul>
+                <li>Speed Counter</li>
+                <li>Shuffle the E's</li>
+                <li>An Eye for Numbers</li>
+                <li>Odd One Out</li>
+                <li class="on-now">MasterMind</li>
+                <li>Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+        
+        <div class="lave">    
+            <h1 class="cool">"MasterMind"</h1>
+
+            <!-- EXPLAINING THE RULES -->
+            <div class="rules">
+                <p>
+                    Are you good a picking locks? Well for this game, you're
+                    going to need to be. I will ask for you to enter a 4-digit
+                    combination, then I will show you if what you said is correct.
+                    I will only show you the numbers that you got right. With
+                    what I provide you, you need to try and crack the combination.
+                    There is no time, so don't fret... <strong>HOWEVER!</strong>
+                    You will only have 9 attempts to crack the lock. Failure to do 
+                    so, will lead to your elmination. But your sucess will reward 
+                    you 250pts! 
+                </p>
+                <form action="/armadillo_competition/mastermind/play">
+                    <button type="submit" class="agree">Let's Go!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

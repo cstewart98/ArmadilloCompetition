@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+    <h3 class="point-holder">
+        Score: {{points}}pts
+    </h3>
+
+        <!-- WHERE YOU'LL INPUT YOUR GUESS-->
+        <div class="col">
+            <div class="gamebox">
+                <ul>
+                    <li>Speed Counter</li>
+                    <li class="on-now">Shuffle the E's</li>
+                    <li>An Eye for Numbers</li>
+                    <li>Odd One Out</li>
+                    <li>MasterMind</li>
+                    <li>Rock, Paper, Scissors</li>
+                </ul>
+            </div>
+
+            <div class="lave centerize">
+                <h3 class="bigger push2">Where's the E?</h3>
+                
+                <form action="/armadillo_competition/shuffle_the_es/check" method="post">
+                    <input type="number" name="ste_number" id="ste_number" title="ste_number" placeholder="Type a number 1-5">
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+</body>
+</html>

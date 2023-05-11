@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+    <div class="point-holder">
+        <h3>
+            Score: {{points}}pts
+        </h3>
+    </div>
+
+    <div class="col">
+        <div class="gamebox">
+            <ul>
+                <li>Speed Counter</li>
+                <li>Shuffle the E's</li>
+                <li>An Eye for Numbers</li>
+                <li>Odd One Out</li>
+                <li>MasterMind</li>
+                <li class="on-now">Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+
+        <div class="lave centerize">
+            <!-- WHERE YOU PICK YOUR SELECTION -->
+                <h3 class="bigger push2">
+                    Select Your Weapon! {{a}}
+                </h3>
+                <form action="/armadillo_competition/rock_paper_scissors/reveal", method="post">
+                    <select name="you_rps" id="you_rps" title="you_rps">
+                        <option value="Rock">Rock</option>
+                        <option value="Paper">Paper</option>
+                        <option value="Scissors">Scissors</option>
+                    </select>
+                    <button type="submit">Shoot!</button>
+                </form>
+        </div>
+    </div>
+</body>
+</html>

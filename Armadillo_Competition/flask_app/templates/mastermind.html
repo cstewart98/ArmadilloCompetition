@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+    <h3 class="point-holder">Score: {{points}}pts</h3>
+    <h3 class="point-holder">Atempts Left: {{attempts}}</h3>
+
+    <div class="col">
+        <div class="gamebox">
+            <ul>
+                <li>Speed Counter</li>
+                <li>Shuffle the E's</li>
+                <li class="on-now">An Eye for Numbers</li>
+                <li>Odd One Out</li>
+                <li>MasterMind</li>
+                <li>Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+
+    <!-- DISPLAY GAME -->
+            <div class="lave centerize">
+                <div id="bank"> <!-- SHOWS ALL PREVIOUS GUESS(ES)-->
+                    <h4>Previous Guesses:</h4>
+                {% for i in range (bank|length) %}
+                <h3>
+                    {{bank[i]}}
+                </h3>
+                {% endfor %}
+
+                </div>
+                <h3 class="bigger push3"> <!-- DISPLAY COMBO/WHAT YOU GOT RIGHT -->
+                    {{combo}}
+                </h3>
+                <form action="/armadillo_competition/mastermind/check" method="post">
+                    <select name="mm_guess1" id="mm_guess1" title="mm_guess1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <select name="mm_guess2" id="mm_guess2" title="mm_guess2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <select name="mm_guess3" id="mm_guess3" title="mm_guess3">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <select name="mm_guess4" id="mm_guess4" title="mm_guess4">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <button type="submit">Crack Safe</button>
+                </form>
+        </div>
+    </div>
+</body>
+</html>

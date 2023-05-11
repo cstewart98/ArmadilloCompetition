@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Competition</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="style.css")}}">
+</head>
+<body>
+    <div class="header">
+        <h1>Armadillo Competition</h1>
+    </div>
+    <div class="col no-ph">
+        <div class="gamebox">
+            <ul>
+                <li>Speed Counter</li>
+                <li class="on-now">Shuffle the E's</li>
+                <li>An Eye for Numbers</li>
+                <li>Odd One Out</li>
+                <li>MasterMind</li>
+                <li>Rock, Paper, Scissors</li>
+            </ul>
+        </div>
+
+        <div class="lave">
+            <h1 class="cool">"Shuffle the E's"</h1>
+
+            <!-- RULES FOR "SHUFFLE THE E'S" -->
+            <div class="rules">
+                <p>
+                    This is exactllty like the old-school carninval game where they put a ball 
+                    underneath a cup of a set and proceed to shuffle them around. The goal is you
+                    to keep an eye on the cup that contains the ball. Then they'll ask you to spot
+                    the cup that has the ball underneath it. Well the rules are the same here! You
+                    will see four lowercase e's and one UPPERCASE E. As I shuffle the letter around,
+                    your goal is to eye the UPPERCASE E. When the E's vanish, five numbers will
+                    appear. As expected, your goal is to slect the letter that has the UPPERCASE.
+                    Failure to do so, will lead to your elmination. But your sucess will reward you 
+                    250pts! 
+                </p>
+                <form action="/armadillo_competition/shuffle_the_es/play">
+                    <button type="submit" class="agree">Let's Go!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
